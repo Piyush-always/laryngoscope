@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbar</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import a font similar to the one in the screenshots (e.g., Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* * Using Inter as a clean, modern sans-serif font.
+         * The background color is sampled from your screenshots.
+         */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfaf4; /* Soft off-white from screenshots */
+            color: #1f1f1f; /* Dark text color */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Helper for full-screen sections */
+        .min-h-screen-custom {
+            min-height: 100vh;
+        }
+
+        /* Fading text animation */
+        .fade-text {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .fade-text.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 z-50 w-full pt-8 px-6 md:px-10">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+            <!-- Logo -->
+            <a href="#" class="w-6 h-6">
+                <!-- SVG Logo from the footer screenshot -->
+                <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 14.3807C3.33333 11.714 6.3 9.71403 10 9.71403C13.7 9.71403 16.6667 11.714 19 14.3807M5 8.71403C6.83333 7.04736 9.1 6.04736 11.8 6.04736C14.5 6.04736 16.8333 7.04736 18.5 8.71403M15 1.71403C13.8333 2.21403 12.5 2.71403 11 2.71403C9.5 2.71403 8.16667 2.21403 7 1.71403" stroke="#1f1f1f" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+            </a>
+            
+            <!-- Navigation Links & CTA -->
+            <div class="flex items-center space-x-6">
+                <a href="#" class="text-sm text-gray-800 hover:text-black">About</a>
+                <a href="#" class="px-5 py-2.5 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800">
+                    Preorder
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen-custom flex items-center justify-center relative pt-20 px-4">
+            <!-- Vignette effect -->
+            <div class="absolute inset-0" style="box-shadow: 0 0 200px 100px rgba(252, 250, 244, 0.9) inset;"></div>
+            <!-- Content -->
+            <div class="text-center z-10">
+                <img src="https://placehold.co/800x600/f0e9dd/f0e9dd?text=+" 
+                     alt="Sandbar ring on a sandy surface"
+                     class="w-full max-w-lg mx-auto rounded-lg"
+                     onerror="this.src='https://placehold.co/800x600/f0e9dd/777?text=Image+Placeholder';">
+                <!-- Placeholder for image_c06bfb.jpg -->
+                <p class="mt-4 text-gray-500 text-sm">Placeholder for image: A silver ring with a black inner band, resting on white sand.</p>
+            </div>
+        </section>
+
+        <!-- Fading Text Section 1 -->
+        <section class="min-h-screen-custom flex items-center justify-center text-center px-4">
+            <div id="fading-text-container" class="text-3xl md:text-4xl text-gray-800 leading-relaxed">
+                <!-- Text elements will be injected by JS -->
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="min-h-screen-custom flex items-center justify-center px-4">
+            <div class="w-full max-w-5xl">
+                <div class="aspect-video bg-gray-200 rounded-2xl flex items-center justify-center relative">
+                    <!-- Placeholder for image_c06f24.jpg -->
+                    <img src="https://placehold.co/1280x720/d1d1d1/d1d1d1?text=+" 
+                         alt="Video placeholder"
+                         class="w-full h-full object-cover rounded-2xl"
+                         onerror="this.src='https://placehold.co/1280x720/d1d1d1/888?text=Video+Placeholder';">
+                    <!-- Play Button Overlay -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <button class="w-16 h-16 md:w-24 md:h-24 bg-black/30 backdrop-blur-sm rounded-full flex items-center justify-center text-white">
+                            <svg class="w-8 h-8 md:w-12 md:h-12 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="mt-4 text-center text-gray-500 text-sm">Placeholder for image: A woman walking on a city street, seen from behind.</p>
+            </div>
+        </section>
+
+        <!-- App UI Section -->
+        <section class="min-h-screen-custom flex items-center justify-center px-4 py-16">
+            <div class="text-center">
+                <img src="https://placehold.co/400x800/eeeeee/eeeeee?text=+" 
+                     alt="Sandbar app interface showing notes"
+                     class="max-h-[70vh] w-auto rounded-3xl border-8 border-gray-200 shadow-xl"
+                     onerror="this.src='https://placehold.co/400x800/eeeeee/888?text=App+UI';">
+                <p class="mt-4 text-gray-500 text-sm">Placeholder for image: A mobile app interface for notes.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="min-h-screen-custom flex items-center justify-center px-4 py-16">
+            <div class="w-full max-w-5xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center">
+                    <!-- Capture -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-w-3 aspect-h-4 bg-gray-200 rounded-2xl overflow-hidden mb-4">
+                            <!-- Placeholder for blurred phone image -->
+                            <img src="https://placehold.co/300x400/d1d1d1/d1d1d1?text=+" alt="Blurred phone" class="w-full h-full object-cover" 
+                                 onerror="this.src='https://placehold.co/300x400/d1d1d1/888?text=Capture';">
+                        </div>
+                        <h3 class="text-lg font-medium">Capture</h3>
+                    </div>
+                    <!-- Play -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-w-3 aspect-h-4 bg-gray-200 rounded-2xl overflow-hidden mb-4">
+                            <!-- Placeholder for hand with ring image -->
+                            <img src="https://placehold.co/300x400/c7b7ae/c7b7ae?text=+" alt="Hand wearing Sandbar ring" class="w-full h-full object-cover" 
+                                 onerror="this.src='https://placehold.co/300x400/c7b7ae/888?text=Play';">
+                        </div>
+                        <h3 class="text-lg font-medium">Play</h3>
+                        <p class="text-gray-600 text-sm mt-2">Control music with hands at your side, compatible with any headphones</p>
+                    </div>
+                    <!-- Expand -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-w-3 aspect-h-4 bg-gray-200 rounded-2xl overflow-hidden mb-4">
+                            <!-- Placeholder for blurred person image -->
+                            <img src="https://placehold.co/300x400/d1d1d1/d1d1d1?text=+" alt="Blurred person" class="w-full h-full object-cover" 
+                                 onerror="this.src='https://placehold.co/300x400/d1d1d1/888?text=Expand';">
+                        </div>
+                        <h3 class="text-lg font-medium">Expand</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Image Section -->
+        <section class="min-h-screen-custom flex items-center justify-center px-4 py-16">
+            <div class="text-center">
+                <img src="https://placehold.co/600x400/f0e9dd/f0e9dd?text=+" 
+                     alt="Gold and Silver Sandbar rings"
+                     class="w-full max-w-lg mx-auto"
+                     onerror="this.src='https://placehold.co/600x400/f0e9dd/777?text=Ring+Colors';">
+                <p class="mt-4 text-gray-500 text-sm">Placeholder for image: Gold and Silver versions of the ring.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-10 px-6 md:px-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
+            <!-- Copyright -->
+            <div class="mb-4 md:mb-0">
+                &copy; 2025 Sandbar
+            </div>
+            
+            <!-- Logo -->
+            <div class="hidden md:block">
+                <a href="#" class="w-6 h-6">
+                    <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 14.3807C3.33333 11.714 6.3 9.71403 10 9.71403C13.7 9.71403 16.6667 11.714 19 14.3807M5 8.71403C6.83333 7.04736 9.1 6.04736 11.8 6.04736C14.5 6.04736 16.8333 7.04736 18.5 8.71403M15 1.71403C13.8333 2.21403 12.5 2.71403 11 2.71403C9.5 2.71403 8.16667 2.21403 7 1.71403" stroke="#1f1f1f" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Footer Links -->
+            <div class="flex flex-wrap justify-center space-x-4">
+                <a href="#" class="hover:text-black">About</a>
+                <a href="#" class="hover:text-black">Stream</a>
+                <a href="#" class="hover:text-black">Contact</a>
+                <a href="#" class="hover:text-black">Careers</a>
+                <a href="#" class="hover:text-black">X</a>
+                <a href="#" class="hover:text-black">IG</a>
+                <a href="#" class="hover:text-black">YT</a>
+                <a href="#" class="hover:text-black">Privacy</a>
+                <a href="#" class="hover:text-black">TOS</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phrases = [
+                "The mind moves fast. Thoughts rarely wait.",
+                [
+                    "Stream is your extended self.",
+                    "It holds what you share.",
+                    "It builds ideas as they form."
+                ]
+            ];
+
+            const container = document.getElementById('fading-text-container');
+            let currentIndex = 0;
+
+            function showNextPhrase() {
+                // Clear container
+                container.innerHTML = '';
+
+                const currentPhrase = phrases[currentIndex];
+                
+                if (Array.isArray(currentPhrase)) {
+                    // Handle multi-line phrases
+                    currentPhrase.forEach((line, index) => {
+                        const p = document.createElement('p');
+                        p.textContent = line;
+                        p.className = 'fade-text';
+                        container.appendChild(p);
+                        // Stagger the fade-in for multi-line
+                        setTimeout(() => p.classList.add('active'), index * 500);
+                    });
+                } else {
+                    // Handle single-line phrases
+                    const p = document.createElement('p');
+                    p.textContent = currentPhrase;
+                    p.className = 'fade-text';
+                    container.appendChild(p);
+                    // Fade in
+                    setTimeout(() => p.classList.add('active'), 100);
+                }
+
+                // Fade out after a few seconds
+                setTimeout(() => {
+                    container.querySelectorAll('.fade-text').forEach(p => {
+                        p.classList.remove('active');
+                    });
+                    
+                    // Prepare for next phrase
+                    setTimeout(() => {
+                        currentIndex = (currentIndex + 1) % phrases.length;
+                        showNextPhrase();
+                    }, 1500); // Wait for fade out
+                    
+                }, 4000); // Time visible
+            }
+
+            // Start the cycle
+            if (container) {
+                showNextPhrase();
+            }
+        });
+    </script>
+
+</body>
+</html>
