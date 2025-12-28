@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Laringoscope</title>
+    <title>UVEAL</title>
     <!-- Import Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <!-- Import a font similar to the one in the screenshots (e.g., Inter) --><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,7 +53,7 @@
             <!-- Logo - U.V.E.A.L with subtitle -->
             <div class="text-center">
                 <a href="#" class="text-2xl md:text-3xl font-semibold text-gray-900">UVEAL</a>
-                <p class="text-xs text-gray-600 leading-tight">Universal Video Extension Accessory for Laryngoscopes</p>
+                <!-- <p class="text-xs text-gray-600 leading-tight"> Universal Video Extension Accessory for Laryngoscopes</p> -->
             </div>
             
             <!-- Navigation Links & CTA --><div class="hidden md:flex items-center space-x-6">
@@ -81,6 +81,12 @@
             </div>
         </section>
 
+        <!-- Fading Text Section 1 --><section class="min-h-screen-custom flex items-center justify-center text-center px-4 py-10">
+            <div id="fading-text-container" class="text-3xl md:text-4xl text-gray-800 leading-relaxed max-w-2xl mx-auto">
+                <!-- Text elements will be injected by JS --></div>
+        </section>
+
+
         <!-- Video Section --><section id="video-section" class="min-h-screen-custom flex items-center justify-center px-4 py-16">
             <div class="w-full max-w-5xl">
                 <div class="aspect-video bg-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden" style="backdrop-filter: blur(5px); border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 0 30px rgba(0,0,0,0.1);">
@@ -97,15 +103,36 @@
             </div>
         </section>
 
-        <!-- Fading Text Section 1 --><section class="min-h-screen-custom flex items-center justify-center text-center px-4 py-10">
-            <div id="fading-text-container" class="text-3xl md:text-4xl text-gray-800 leading-relaxed max-w-2xl mx-auto">
-                <!-- Text elements will be injected by JS --></div>
+        <!-- Problem Statement Section --><section class="min-h-screen-custom flex items-center justify-center px-4 py-16">
+            <div class="w-full max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12 text-gray-800">The Problem</h2>
+                <div class="space-y-8">
+                    <!-- Point 1 -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center flex-shrink-0 font-semibold text-sm">1</div>
+                        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">Intubation is a process where using a laryngoscope, a tube is placed into the windpipe to assist in ventilation</p>
+                    </div>
+                    
+                    <!-- Point 2 -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center flex-shrink-0 font-semibold text-sm">2</div>
+                        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">Direct Laryngoscopy often leads to failed intubations in the emergency and during surgeries</p>
+                    </div>
+                    
+                    <!-- Point 3 -->
+                    <div class="flex items-start gap-6">
+                        <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center flex-shrink-0 font-semibold text-sm">3</div>
+                        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">In such cases a videolaryngoscope is used. But they are widely unavailable due to their expensive cost</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
 
         <!-- Brief Text Section -->
         <section class="min-h-screen-custom flex items-center justify-center text-center px-4 py-10">
             <div class="text-3xl md:text-4xl text-gray-800 leading-relaxed max-w-2xl mx-auto space-y-6">
-            <p>easy to use</p>
+            <p>UVEAL provides best low cost solution</p>
             </div>
         </section>
 
@@ -118,7 +145,7 @@
                             <img src="insertion.jpg" alt="Person holding phone, blurred" class="w-full h-full object-cover block"
                                  onerror="this.src='https://placehold.co/80x80/d1d1d1/888?text=Capture';">
                         </div>
-                        <h3 class="text-xs font-medium">Capture</h3>
+                        <h3 class="text-s font-medium">Capture</h3>
                         <!-- <p class="text-gray-600 text-xxs mt-1">Record moments effortlessly, keeping your hands free.</p> -->
                     </div>
 
@@ -128,7 +155,7 @@
                             <img src="led.jpg" alt="Hand wearing The Laringoscope ring" class="w-full h-full object-cover block"
                                  onerror="this.src='https://placehold.co/80x80/c7b7ae/888?text=Play';">
                         </div>
-                        <h3 class="text-xs font-medium">Play</h3>
+                        <h3 class="text-s font-medium">Play</h3>
                         <!-- <p class="text-gray-600 text-xxs mt-1">Control music with hands at your side, compatible with any headphones</p> -->
                     </div>
 
@@ -138,7 +165,7 @@
                             <img src="phone .jpg" alt="Blurred person silhouette" class="w-full h-full object-cover block"
                                  onerror="this.src='https://placehold.co/80x80/d1d1d1/888?text=Expand';">
                         </div>
-                        <h3 class="text-xs font-medium">Expand</h3>
+                        <h3 class="text-s font-medium">Expand</h3>
                         <!-- <p class="text-gray-600 text-xxs mt-1">Seamlessly integrate with your digital life and surroundings.</p> -->
                     </div>
 
@@ -148,7 +175,7 @@
                             <img src="" alt="Feature 4" class="w-full h-full object-cover block"
                                  onerror="this.src='https://placehold.co/80x80/d1d1d1/888?text=Feature+4';">
                         </div>
-                        <h3 class="text-xs font-medium">detach</h3>
+                        <h3 class="text-s font-medium">detach</h3>
                         <!-- <p class="text-gray-600 text-xxs mt-1">Description for feature 4.</p> -->
                     </div>
 
@@ -158,7 +185,7 @@
                             <img src="" alt="Feature 5" class="w-full h-full object-cover block"
                                  onerror="this.src='https://placehold.co/80x80/c7b7ae/888?text=Feature+5';">
                         </div>
-                        <h3 class="text-xs font-medium">clean</h3>
+                        <h3 class="text-s font-medium">clean</h3>
                         <!-- <p class="text-gray-600 text-xxs mt-1">Description for feature 5.</p> -->
                     </div>
 
@@ -168,7 +195,7 @@
                             <img src="" alt="Feature 6" class="w-full h-full object-cover block"
                                  onerror="this.src='https://placehold.co/80x80/d1d1d1/888?text=Feature+6';">
                         </div>
-                        <h3 class="text-xs font-medium">attach</h3>
+                        <h3 class="text-s font-medium">attach</h3>
                         <!-- <p class="text-gray-600 text-xxs mt-1">Description for feature 6.</p> -->
                     </div>
                 </div>
