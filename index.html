@@ -33,19 +33,33 @@
         .fade-text.active {
             opacity: 1;
         }
+
+        /* Header hide/show on scroll */
+        header {
+            transition: transform 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+            background-color: rgba(252, 250, 244, 0.5);
+        }
+
+        header.hide {
+            transform: translateY(-100%);
+        }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- Header --><header class="fixed top-0 left-0 z-50 w-full pt-8 px-6 md:px-10">
-        <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <!-- Logo - Changed to text "Viscoscope" -->
-            <a href="#" class="text-2xl md:text-3xl font-semibold text-gray-900">Viscoscope</a>
+    <!-- Header --><header class="fixed top-0 left-0 z-50 w-full pt-4 px-6 md:px-10">
+        <nav class="flex justify-center md:justify-between items-center max-w-7xl mx-auto">
+            <!-- Logo - U.V.E.A.L with subtitle -->
+            <div class="md:flex-1">
+                <a href="#" class="text-2xl md:text-3xl font-semibold text-gray-900">UVEAL</a>
+                <p class="text-xs text-gray-600 leading-tight">Universal Video Extension Accessory for Laryngoscopes</p>
+            </div>
             
-            <!-- Navigation Links & CTA --><div class="flex items-center space-x-6">
-                <a href="#" class="text-sm text-gray-800 hover:text-black">About</a>
+            <!-- Navigation Links & CTA --><div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-sm text-gray-800 hover:text-black">Contact</a>
                 <a href="#" class="px-5 py-2.5 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800">
-                    Preorder
+                    SHOP
                 </a>
             </div>
         </nav>
@@ -65,7 +79,7 @@
             </div>
         </section>
 
-        <!-- Fading Text Section 1 --><section class="min-h-screen-custom flex items-center justify-center text-center px-4">
+        <!-- Fading Text Section 1 --><section class="min-h-screen-custom flex items-center justify-center text-center px-4 py-10">
             <div id="fading-text-container" class="text-3xl md:text-4xl text-gray-800 leading-relaxed max-w-2xl mx-auto">
                 <!-- Text elements will be injected by JS --></div>
         </section>
@@ -74,7 +88,7 @@
             <div class="w-full max-w-5xl">
                 <div class="aspect-video bg-gray-200 rounded-2xl flex items-center justify-center relative overflow-hidden">
                     <video id="mainVideo" class="w-full h-full object-cover" loop muted playsinline preload="auto">
-                        <!-- Replace with your actual video source --><source src="Laryngoscope.mp4" type="video/mp4">
+                        <!-- Replace with your actual video source --><source src="UVEAL 3d demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <!-- Play/Pause Button Overlay --><div id="videoControls" class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300">
@@ -98,21 +112,20 @@
         </section>
 
         <!-- Brief Text Section -->
-        <section class="min-h-screen-custom flex items-center justify-center text-center px-4">
+        <section class="min-h-screen-custom flex items-center justify-center text-center px-4 py-10">
             <div class="text-3xl md:text-4xl text-gray-800 leading-relaxed max-w-2xl mx-auto space-y-6">
-            <p>Stream is your extended self.</p>
-            <p>It builds ideas as they form.</p>
+            <p>easy to use</p>
             </div>
         </section>
 
         <!-- Features Section --><section class="min-h-screen-custom flex items-center justify-center px-4 py-16">
-            <div class="w-full max-w-5xl">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start text-center">
+            <div class="w-full max-w-6xl">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 items-start text-center">
                     <!-- Capture -->
                     <div class="flex flex-col items-center">
-                        <div class="w-full aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden mb-4">
+                        <div class="w-full aspect-[1/1.2] bg-gray-200 rounded-2xl overflow-hidden mb-3">
                             <img src="insertion.jpg" alt="Person holding phone, blurred" class="w-full h-full object-cover block"
-                                 onerror="this.src='https://placehold.co/300x400/d1d1d1/888?text=Capture+Image';">
+                                 onerror="this.src='https://placehold.co/200x240/d1d1d1/888?text=Capture+Image';">
                         </div>
                         <h3 class="text-lg font-medium">Capture</h3>
                         <p class="text-gray-600 text-sm mt-2">Record moments effortlessly, keeping your hands free.</p>
@@ -120,9 +133,9 @@
 
                     <!-- Play -->
                     <div class="flex flex-col items-center">
-                        <div class="w-full aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden mb-4">
+                        <div class="w-full aspect-[1/1.2] bg-gray-200 rounded-2xl overflow-hidden mb-3">
                             <img src="led.jpg" alt="Hand wearing The Laringoscope ring" class="w-full h-full object-cover block"
-                                 onerror="this.src='https://placehold.co/300x400/c7b7ae/888?text=Play+Image';">
+                                 onerror="this.src='https://placehold.co/200x240/c7b7ae/888?text=Play+Image';">
                         </div>
                         <h3 class="text-lg font-medium">Play</h3>
                         <p class="text-gray-600 text-sm mt-2">Control music with hands at your side, compatible with any headphones</p>
@@ -130,12 +143,42 @@
 
                     <!-- Expand -->
                     <div class="flex flex-col items-center">
-                        <div class="w-full aspect-[3/4] bg-gray-200 rounded-2xl overflow-hidden mb-4">
+                        <div class="w-full aspect-[1/1.2] bg-gray-200 rounded-2xl overflow-hidden mb-3">
                             <img src="phone .jpg" alt="Blurred person silhouette" class="w-full h-full object-cover block"
-                                 onerror="this.src='https://placehold.co/300x400/d1d1d1/888?text=Expand+Image';">
+                                 onerror="this.src='https://placehold.co/200x240/d1d1d1/888?text=Expand+Image';">
                         </div>
                         <h3 class="text-lg font-medium">Expand</h3>
                         <p class="text-gray-600 text-sm mt-2">Seamlessly integrate with your digital life and surroundings.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-[1/1.2] bg-gray-200 rounded-2xl overflow-hidden mb-3">
+                            <img src="" alt="Feature 4" class="w-full h-full object-cover block"
+                                 onerror="this.src='https://placehold.co/200x240/d1d1d1/888?text=Feature+4';">
+                        </div>
+                        <h3 class="text-lg font-medium">Feature 4</h3>
+                        <p class="text-gray-600 text-sm mt-2">Description for feature 4.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-[1/1.2] bg-gray-200 rounded-2xl overflow-hidden mb-3">
+                            <img src="" alt="Feature 5" class="w-full h-full object-cover block"
+                                 onerror="this.src='https://placehold.co/200x240/c7b7ae/888?text=Feature+5';">
+                        </div>
+                        <h3 class="text-lg font-medium">Feature 5</h3>
+                        <p class="text-gray-600 text-sm mt-2">Description for feature 5.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="flex flex-col items-center">
+                        <div class="w-full aspect-[1/1.2] bg-gray-200 rounded-2xl overflow-hidden mb-3">
+                            <img src="" alt="Feature 6" class="w-full h-full object-cover block"
+                                 onerror="this.src='https://placehold.co/200x240/d1d1d1/888?text=Feature+6';">
+                        </div>
+                        <h3 class="text-lg font-medium">Feature 6</h3>
+                        <p class="text-gray-600 text-sm mt-2">Description for feature 6.</p>
                     </div>
                 </div>
             </div>
@@ -148,6 +191,9 @@
                      class="w-full max-w-lg mx-auto"
                      onerror="this.src='https://placehold.co/600x400/f0e9dd/777?text=Ring+Colors';">
                 <p class="mt-4 text-gray-500 text-sm">Choose the style that complements your personal aesthetic.</p>
+                <a href="#" class="mt-6 px-6 py-3 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 inline-block">
+                    Preorder
+                </a>
             </div>
         </section>
     </main>
@@ -176,6 +222,24 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // --- Header Hide/Show on Scroll ---
+            const header = document.querySelector('header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop) {
+                    // Scrolling DOWN
+                    header.classList.add('hide');
+                } else {
+                    // Scrolling UP
+                    header.classList.remove('hide');
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+            });
+
             // --- Fading Text Animation ---
             const phrases = [
                 "The mind moves fast. Thoughts rarely wait.",
